@@ -1,0 +1,29 @@
+$max-mobile: 599px;
+$tablet: 600px;
+$tablet-landscape: 900px;
+$desktop: 1200px;
+$big-desktop: 1800px;
+
+@mixin respond($size) {
+	@if $size == phone {
+		@media (max-width: $max-mobile) { @content; }
+	} @else if $size == tablet {
+		@media (min-width: $tablet) { @content; }
+	} @else if $size == tablet-landscape {
+		@media (min-width: $tablet-landscape) { @content; }
+	} @else if $size == desktop {
+		@media (min-width: $desktop) { @content; }
+	} @else if $size == big-desktop {
+		@media (min-width: $big-desktop) { @content; }
+	}
+}
+/** usage
+  @include respond(phone) {    
+    background: #333;
+  }
+  @include respond(tablet-landscape) {    
+    background: #eee;
+  }
+**/
+
+

@@ -1,0 +1,28 @@
+{
+  "name": "vanilla-boilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "main": "assets/scripts/main.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "dev": "webpack serve --history-api-fallback",
+    "build": "npm run clean && webpack",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
+    "babel-loader": "^9.1.2",
+    "base64-inline-loader": "^2.0.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.2",
+    "rimraf": "^4.1.2",
+    "sass": "^1.32.8",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
